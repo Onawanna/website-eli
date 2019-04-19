@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="shortcut icon" href="images/guitar_icon.png" />
+
+  <title > Eli Gardiner | Music </title>
+
+<script>
+
+$(document).ready(function(){
+	$('.hamburger-shell').click(function(){
+		$('#menu').slideToggle(300);
+		$('.top').toggleClass('rotate');
+		$('.middle').toggleClass('rotate-back');
+		$('.menu-name').toggleClass('bump');
+		$('.bg-cover').toggleClass('reveal');
+	});
+	$('.bg-cover').click(function(){
+		$('#menu').slideToggle(300);
+		$('.top').toggleClass('rotate');
+		$('.middle').toggleClass('rotate-back');
+		$('.menu-name').toggleClass('bump');
+		$('.bg-cover').toggleClass('reveal');
+	})
+});
+
+</script>
+
+</head>
+
+  <header id="top">
+        <ul class="skip-links">
+            <li><a href="#nav">Skip to navigation</a></li>
+            <li><a href="#main">Skip to the main content</a></li>
+        </ul>
+<!-- add sticky hamburger menu navigation -->
+    <nav id="navbar">
+            <!-- start navigation bar -->
+            <ul class="mymain-nav">
+              <li><a href = "index.html" class="current">Home</a></li>
+              <li><a href = "music.html">Music</a></li>
+              <li><a href = "photos.html">Photos</a></li>
+              <li><a href = "contact.html">Contact</a></li>
+            </ul>
+    </nav>
+
+      <a class="hamburger-shell">
+      	<div class="hamb top"></div>
+      		<div class="hamb middle"></div>
+      	<div class="menu-name">MENU</div>`
+              <!-- nav bar -->
+              <ul id="menu">
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "music.html" class="current">Music</a></li>
+                <li><a href = "photos.html">Photos</a></li>
+                <li><a href = "contact.html">Contact</a></li>
+              </ul>
+              </a>
+          </nav>
+
+  <body>
+    <!--add skip to main navigation -->
+    </header>
+      <main id="main">
+        <div class="parallax"></div>
+        <!--<div class="overlap"> -->
+        <div class="sect1">
+            <h1>Eli Gardiner</h1>
+            <h2>Singer | Storyteller | Guitar Player</h2>
+        </div>
+        <div class="parallax"></div>
+        <div class="sect2">
+              <h2>Motivation</h2>
+              <p> When big changes have happened in my life music helps to make sense of it. I grew up with music, listening to “Saturday Night Gold” on the radio and my Dad’s albums of Jim Croce and Bruce Springsteen. So when my brother passed away from a drug overdose I turned to the one thing that helped to release some of that pain, hurt, and anger, writing songs.</p>
+        </div>
+        <div class="parallax"></div>
+        <div class="sect3">
+              <h2>Media<h2>
+              <p>"Through it all, Gardiner remains  solemnly soft spoken, approaching questions of mortality with quiet care. A dour aura surrounds his stories, but so does a kind of peace  found in their telling."-The All Scene Eye</p>
+        </div>
+        </div>
+        <div class="parallax"></div>
+
+    <!--callout button at bottom -->
+        <div class="callout">
+        <div class="callout-header">New Music</div>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;
+        </span>
+        <div class="callout-container">
+          <p>New album, Fire and Medicine, coming soon!</p>
+        </div>
+      </div>
+
+</main>
+   <!-- footer -->
+   <footer>
+       <p>All creative content is the property of Eli Gardiner<a href="#top">Back to Top</a></p>
+   </footer>
+
+    <script>
+    //script for sticky nav
+      window.onscroll = function(){qqqscroll()}
+
+      var nav= document.querySelector(".mymain-nav");
+      var dis=nav.offsetTop
+      function qqqscroll(){
+      if (window.pageYOffset >= dis){
+          nav.classList.add("mymain-nav-scrolled")}}
+      console.log(nav)
+
+
+
+    </script>
+</body>
+
+</html>

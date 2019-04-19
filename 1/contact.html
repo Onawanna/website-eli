@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="shortcut icon" href="images/guitar_icon.png" />
+
+  <title > Photos | Eli Gardiner </title>
+
+<script>
+
+
+//Click the hamburger menu to see the animation
+//You can click the X to close or click anywhere outside the menu
+
+$(document).ready(function(){
+	$('.hamburger-shell').click(function(){
+		$('#menu').slideToggle(300);
+		$('.top').toggleClass('rotate');
+		$('.middle').toggleClass('rotate-back');
+		$('.menu-name').toggleClass('bump');
+		$('.bg-cover').toggleClass('reveal');
+	});
+	$('.bg-cover').click(function(){
+		$('#menu').slideToggle(300);
+		$('.top').toggleClass('rotate');
+		$('.middle').toggleClass('rotate-back');
+		$('.menu-name').toggleClass('bump');
+		$('.bg-cover').toggleClass('reveal');
+	})
+});
+
+</script>
+</head>
+
+<body>
+<!--add skip to main navigation -->
+<header id="top">
+        <ul class="skip-links">
+            <li><a href="#nav">Skip to navigation</a></li>
+            <li><a href="#main">Skip to the main content</a></li>
+        </ul>
+<!-- add sticky hamburger menu navigation -->
+    <nav id="nav">
+
+            <ul>
+              <li><a href = "index.html">Home</a></li>
+              <li><a href = "music.html">Music</a></li>
+              <li><a href = "photos.html">Photos</a></li>
+              <li><a href = "contact.html" class="current">Contact</a></li>
+            </ul>
+        </nav>
+
+    <a class="hamburger-shell">
+    	<div class="hamb top"></div>
+    		<div class="hamb middle"></div>
+    	<div class="menu-name">MENU</div>`
+            <!--nav bar-->
+            <ul id="menu">
+              <li><a href = "index.html">Home</a></li>
+              <li><a href = "music.html">Music</a></li>
+              <li><a href = "photos.html" class="current">Photos</a></li>
+              <li><a href = "contact.html">Contact</a></li>
+            </ul>
+            </a>
+        </nav>
+</header>
+<main id="main">
+  <div class="main-content main-container">
+    <div class='connect'>
+        <h1> Let's Connect </h1>
+    </div>
+  <!-- add typewriter effect to h2 -->
+    <div class="typeplace">
+            How about you <span id="typing"></span>
+    </div>
+    <span class='type-cursor'></span>
+
+<!-- connect icons -->
+    <div class="icon-container">
+              <div class="fb-icon icon">
+                  <a href="https://www.facebook.com/pg/eliandthewolves/" target="_blank">
+                        <span class="fa-stack fa-2x fa-tw"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></span>
+                  </a>
+              </div>
+              <div class="spotify-icon icon">
+                  <a href="https://open.spotify.com/artist/4dWSQZqsKeLc9MOCyM5AVZ" target="_blank">
+                    <span class="fa-stack fa-2x fa-tw"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-spotify fa-stack-1x fa-inverse"></i></span>
+                </a>
+              </div>
+              <div class="ig-icon icon">
+                  <a href="https://www.instagram.com/eli.gardiner/" target="_blank">
+                    <span class="fa-stack fa-2x fa-tw"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-instagram fa-stack-1x fa-inverse"></i></span>
+                  </a>
+              </div>
+              <div class="bandcamp-icon icon">
+                  <a href="https://eligardiner.bandcamp.com/" target="_blank">
+                    <span class="fa-stack fa-2x fa-tw"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-bandcamp fa-stack-1x fa-inverse"></i></span>
+                </a>
+              </div>
+              <div class="youtube-icon icon">
+                  <a href="https://www.youtube.com/channel/UCQVJLJWsVBbQScFLDGCwsRg" target="_blank">
+                    <span class="fa-stack fa-2x fa-tw"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-youtube fa-stack-1x fa-inverse"></i></span>
+                </a>
+              </div>
+                  </a>
+              </div>
+
+          </div>
+
+</main>
+   <!-- footer -->
+   <footer>
+       <p>All creative content is the property of Eli Gardiner</p>
+       <a href="#top">Back to Top</a></p>
+   </footer>
+<script>
+
+//script for typewriter effect
+  var speed = 170;
+  var pos = 0;
+  var turn = 0;
+  var data = ['book a gig.','come to a show.','listen and share my music.', 'check out my latest songs online.'];
+
+setTimeout(typeWriter, speed);
+  function typeWriter() {
+    if (pos < data[turn].length) {
+      document.getElementById("typing").innerHTML += data[turn].charAt(pos);
+      pos++;
+      setTimeout(typeWriter, speed);
+    } else {
+    	setTimeout(erase, speed+100);
+    }
+    }
+
+  function erase() {
+  	if (pos >= 0) {
+        var str=data[turn].toString().substring(0, pos);
+        document.getElementById("typing").innerHTML = str;
+        pos--;
+        setTimeout(erase, speed-100);
+      } else {
+        turn++;
+        if(turn>=data.length)
+          turn=0;
+        setTimeout(typeWriter, speed);
+      }
+}
+</script>
+</body>
+
+</html>
